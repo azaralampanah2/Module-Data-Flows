@@ -71,11 +71,20 @@ let hogwarts = [
   },
 ];
 
-function gryffindorLivers(){
+function gryffindorLivers(){    //display the names of the people who belong to the Gryffindor house
 for({firstName,house,lastName} of hogwarts){
   if (house=="Gryffindor"){
     console.log(firstName+" "+lastName)
   }
 }
 }
-gryffindorLivers(hogwarts)
+gryffindorLivers(hogwarts)    //display the names of teachers who have pets
+function teachersWithPet(){
+  for({firstName,pet,occupation} of hogwarts){
+    if(pet && occupation =="Teacher"){
+      console.log(firstName)
+    }
+  }
+
+}
+teachersWithPet(hogwarts)
