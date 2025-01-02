@@ -38,12 +38,30 @@
       <form class="search" id="search">
         <label class="search__label" for="search-tf">City</label>
         <input class="search__input" id="search-tf" name="city" placeholder="Enter city name" autocomplete="city" />
-        <button class="btn search__btn">Go</button>
+        <button class="btn search__btn" id="goBtn">Go</button>
       </form>
     </div>
   </main>
 
-  <!-- JS goes here -->
+  <script>
+
+    let goBtn=document.querySelector("#goBtn")
+    let cityInput=document.querySelector("#search-tf")
+    
+    goBtn.addEventListener("click",getWeather)
+    function getWeather(){
+      let cityInputValue=cityInput.value;
+      event.preventDefault();
+      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityInputValue}&APPID=f0c663a41414fed40e10a4bdd0884f1e`)
+      .then(response=>response.json())
+      .then(data=>console.log(data.main.temp))
+
+    }
+
+
+  </script>
+
+
 </body>
 
 </html>
