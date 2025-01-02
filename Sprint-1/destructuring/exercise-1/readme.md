@@ -35,7 +35,7 @@ const personOne = {
   age: 34,
   favouriteFood: "Spinach",
 };
-const {name,age,favouriteFood}=personone
+const { name, age, favouriteFood }=personone
 
 
 

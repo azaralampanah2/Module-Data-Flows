@@ -73,7 +73,7 @@ let hogwarts = [
 
 function gryffindorLivers(){
   console.log("people who belong to the Gryffindor house:")    //display the names of the people who belong to the Gryffindor house
-for({firstName,house,lastName} of hogwarts){
+for({ firstName, house, lastName } of hogwarts){
   if (house=="Gryffindor"){
     console.log(firstName+" "+lastName)
   }
@@ -82,7 +82,7 @@ for({firstName,house,lastName} of hogwarts){
 gryffindorLivers(hogwarts)    //display the names of teachers who have pets
 function teachersWithPet(){
   console.log(" names of teachers who have pets:")
-  for({firstName,pet,occupation} of hogwarts){
+  for({ firstName, pet, occupation } of hogwarts){
     if(pet && occupation =="Teacher"){
       console.log(firstName)
     }
