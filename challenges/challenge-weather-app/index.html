@@ -21,7 +21,9 @@
       </h1>
     </header>
 
-    <figure class="photo" id="photo"></figure>
+    <figure class="photo" id="photo" >
+      
+    </figure>
 
     <div class="info">
       <p class="info__item info__item--conditions" id="conditions"></p>
@@ -33,7 +35,8 @@
     </div>
 
     <div class="thumbs" id="thumbs"></div>
-
+<label id="temp"></label>
+<label id="tempreture"></label>
     <div class="controls">
       <form class="search" id="search">
         <label class="search__label" for="search-tf">City</label>
@@ -43,20 +46,11 @@
     </div>
   </main>
 
-  <script>
+  <script src="script.js" defer>
 
-    let goBtn=document.querySelector("#goBtn")
-    let cityInput=document.querySelector("#search-tf")
+   
+      
     
-    goBtn.addEventListener("click",getWeather)
-    function getWeather(){
-      let cityInputValue=cityInput.value;
-      event.preventDefault();
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityInputValue}&APPID=f0c663a41414fed40e10a4bdd0884f1e`)
-      .then(response=>response.json())
-      .then(data=>console.log(data.main.temp))
-
-    }
 
 
   </script>
