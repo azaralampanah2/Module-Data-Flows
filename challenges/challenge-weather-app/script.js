@@ -17,7 +17,7 @@ const state={
  
  function fetchingTemp(){
   
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${state.searchTerm}&APPID=f0c663a41414fed40e10a4bdd0884f1e`)
+  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${state.searchTerm}&APPID=${OWM_KEY}`)
           .then(response=>
                 
             
@@ -65,7 +65,7 @@ photo.style.backgroundImage = "none"
    
  
  function fetchImage(){     
- fetch(`https://api.unsplash.com/search/photos?query=${state.corresImageName}&client_id=BGjI5c4diDleXiEuPRFmLiP1k-iJiQmSMtAPjb_3NKk`)
+ fetch(`https://api.unsplash.com/search/photos?query=${state.corresImageName}&client_id=${UnSplashId}`)
  .then(response=>response.json())
  .then(data=>{console.log(data.results)
  state.images=data.results
@@ -83,7 +83,7 @@ console.log(state.images)
   const img = document.createElement("img")
   img.src=imagess.links.download
   thumbNails.appendChild(img)
-  photo.classList.add('loaded');
+  
   img.addEventListener("click",()=>{
     photo.innerHTML=""
     const image=document.createElement("img")
