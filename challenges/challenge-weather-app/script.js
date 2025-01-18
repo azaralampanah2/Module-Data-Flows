@@ -65,7 +65,7 @@ photo.style.backgroundImage = "none"
    
  
  function fetchImage(){     
- fetch(`https://api.unsplash.com/search/photos?query=${state.corresImageName}&client_id=${UnSplashId}`)
+ fetch(`https://api.unsplash.com/search/photos?query=${state.corresImageName}&client_id=${UnSplashID}`)
  .then(response=>response.json())
  .then(data=>{console.log(data.results)
  state.images=data.results
