@@ -85,13 +85,14 @@ console.log(state.images)
   thumbNails.appendChild(img)
   photo.classList.add('loaded');
   img.addEventListener("click",()=>{
-    
-    
-    
-    photo.style.backgroundImage = `url(${state.imageArr[index]})`; // Set background image
-    
-   photo.style.backgroundSize = "contain"; // Optional: Adjust the background size
+    photo.innerHTML=""
+    const image=document.createElement("img")
+    image.classList.add("photo")
+  image.src = state.imageArr[index]; // Set background image
+  photo.appendChild(image)
+  // photo.style.backgroundSize = "contain"; 
    
+   //photo.style.backgroundRepeat="no-repeat"
         console.log(state.imageArr)
     
   })
